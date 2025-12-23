@@ -1,0 +1,61 @@
+---
+
+---
+
+<nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800 backdrop-blur-lg bg-opacity-90">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      
+      
+      <div class="shrink-0">
+        <a href="/" class="text-xl font-bold text-gray-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+          The J-Handbook
+        </a>
+      </div>
+      
+      
+      <ul class="hidden md:flex items-center space-x-8">
+        <li>
+          <a href="/" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors">
+            Inicio
+          </a>
+        </li>
+        <li>
+          <a href="/guides/example" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors">
+            Guías
+          </a>
+        </li>
+        <li>
+          <a href="/reference" class="text-gray-700 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 font-medium transition-colors">
+            Referencia
+          </a>
+        </li>
+      </ul>
+
+      <div class="hidden md:block">
+        <input 
+          type="search" 
+          id="search-input"
+          placeholder="Buscar..." 
+          class="px-4 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 focus:outline-none focus:ring-2 focus:ring-purple-600"
+        />
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script is:inline> 
+  (function() {
+    const html = document.documentElement;
+    
+    // Detectar preferencia del sistema: true = oscuro, false = claro
+    const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // Aplicar clase 'dark' si el sistema está en modo oscuro
+    if (isDark) {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+  })();
+</script>

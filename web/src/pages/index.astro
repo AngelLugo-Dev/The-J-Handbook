@@ -1,0 +1,60 @@
+---
+
+
+import MainLayouts from '../layouts/MainLayouts.astro';
+
+const title = 'The J-Handbook - Inicio';
+const description = 'Aprende Java de forma interactiva con ejercicios prácticos';
+---
+
+<MainLayouts title={title} description={description}>
+  
+  
+  <section class="text-center py-16">
+    <h1 class="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
+      Bienvenido a The J-Handbook
+    </h1>
+    <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+      Aprende Java de forma práctica e interactiva con ejercicios en tiempo real
+    </p>
+  </section>
+
+  
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
+    
+    
+    <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900">
+      <h2 class="text-2xl font-semibold mb-4">📚 Fundamentos</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        Comienza con los conceptos básicos de Java desde cero
+      </p>
+      <a href="/guides/example" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+        Empezar →
+      </a>
+    </div>
+    
+    
+    <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900">
+      <h2 class="text-2xl font-semibold mb-4">💻 Ejercicios</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        Practica con ejercicios interactivos y desafíos
+      </p>
+      <a href="/reference" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+        Ver ejercicios →
+      </a>
+    </div>
+
+   
+    <div class="p-6 border border-gray-200 dark:border-gray-800 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white dark:bg-gray-900">
+      <h2 class="text-2xl font-semibold mb-4">🎯 Proyectos</h2>
+      <p class="text-gray-600 dark:text-gray-400 mb-4">
+        Construye aplicaciones reales paso a paso
+      </p>
+      <a href="/intro" class="inline-block px-6 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-lg transition-colors">
+        Explorar →
+      </a>
+    </div>
+  </section>
+
+</MainLayouts>
+
