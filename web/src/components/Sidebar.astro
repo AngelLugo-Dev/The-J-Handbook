@@ -1,0 +1,85 @@
+---
+
+const sidebarSections = [
+  {
+    title: "Primeros Pasos",
+    links: [
+      { text: "Introducción", href: "/intro" },
+      { text: "Instalación", href: "/installation" },
+      { text: "Tu primer programa", href: "/first-program" },
+    ]
+  },
+  {
+    title: "Fundamentos",
+    links: [
+      { text: "Variables", href: "/variables" },
+      { text: "Tipos de datos", href: "/data-types" },
+      { text: "Operadores", href: "/operators" },
+      { text: "Control de flujo", href: "/control-flow" },
+    ]
+  },
+  {
+    title: "POO",
+    links: [
+      { text: "Clases y Objetos", href: "/classes" },
+      { text: "Herencia", href: "/inheritance" },
+      { text: "Polimorfismo", href: "/polymorphism" },
+    ]
+  },
+  {
+    title: "Recursos",
+    links: [
+      { text: "Guías", href: "/guides/example" },
+      { text: "Referencia", href: "/reference" },
+    ]
+  }
+];
+---
+
+<aside class="w-64 bg-gray-50 dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 h-screen sticky top-16 overflow-y-auto">
+  <nav class="p-4">
+    
+    {sidebarSections.map(section => (
+      <div class="mb-6">
+       
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 uppercase tracking-wider mb-2">
+          {section.title}
+        </h3>
+        
+        <ul class="space-y-1">
+          {section.links.map(link => (
+            <li>
+              <a 
+                href={link.href}
+                class="block px-3 py-2 text-gray-700 dark:text-gray-300 hover:bg-purple-100 dark:hover:bg-gray-800 hover:text-purple-600 dark:hover:text-purple-400 rounded-md transition-colors"
+              >
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </nav>
+</aside>
+
+<!--
+  EXPLICACIÓN:
+  
+  1. sidebarSections: Un array (lista) de objetos que define el menú
+     - Cada objeto tiene un "title" (título de sección)
+     - Y un array de "links" (enlaces)
+  
+  2. .map(): Función que recorre el array y crea HTML por cada elemento
+     - Es como un "for each" pero en JSX/Astro
+  
+  3. Tailwind classes:
+     - w-64: ancho de 256px
+     - sticky top-16: se queda fijo 64px desde arriba
+     - overflow-y-auto: si el contenido es muy largo, muestra scroll
+     - hover:bg-purple-100: cambia color de fondo al pasar el mouse
+  
+  4. Para agregar más enlaces:
+     - Solo edita el array "sidebarSections" arriba
+     - Agrega más objetos { text: "...", href: "..." }
+-->
